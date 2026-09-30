@@ -4,7 +4,7 @@ Status legend: Confirmed / Likely / Unverified
 
 ## Intake (user answers)
 - Importer: Kadori (כדורי). VIN prefix: LMELB (WMI meaning not verified). Trim: Pro GT (= ET5 Pro GT in Israel, Likely)
-- Head-unit menu: no connected-services / SIM / 4G / phone-key that the user knows of
+- Head-unit menu: no SIM/4G/connected-services entry (user checked: none). No phone-key. Importer (Kadori) has not answered.
 - Phone: Android, needs step-by-step guidance for APK
 - Hardware budget: up to 200 NIS
 
@@ -34,3 +34,13 @@ The official app is very likely a dead end for a car without a DELTA module. Ret
 5. **Likely (OBD)**: Car Scanner (ELM327 app) added support for Elaris/Imperium/Skywell/Skyworth ET5/EV6/BE11 in v1.112.7 (https://www.carscanner.info/2024/06/ , snippet only, page blocked). Suggests read-only OBD data works with a cheap BLE/WiFi ELM327 dongle. Data set (SOC, temps) not confirmed.
 6. **Unverified**: no public DBC or Home Assistant integration found for Skywell.
 7. Blocked by sandbox proxy: xdaforums.com, carscanner.info, evm.co.il, play.google.com, apps.apple.com.
+
+## Phase C – Alternatives to the official cloud
+
+1. **Likely**: With no SIM/connectivity menu and no phone key, the Israeli unit most likely has no active T-box. Not proven (importer silent).
+2. **Unverified**: Any official/aftermarket T-box retrofit for ET5. Search found nothing. No source.
+3. **Likely**: Read-only OBD is realistic (Car Scanner supports ET5/EV6, see phase B). Fits the 200 NIS budget (BLE/WiFi ELM327). Gateway filtering and exact PIDs: Unverified.
+4. **Unverified / doubtful**: Starting A/C via OBD/CAN. No public source. Generic finding: modern cars gate actuation behind authenticated modules; aftermarket "smart start" kits are a risky wiring path. Would require writing CAN frames or wiring into the car -> conflicts with the no-modification constraint and warranty. Not recommended.
+5. **Unverified**: Public DBC / Home Assistant work for Skywell: none found in English search. Russian/Turkish/Arabic forums (Drive2, 4PDA) and Hebrew Facebook groups not yet searched (blocked/no access).
+6. **Not found in manuals (pages blocked)**: whether the ET5 has an in-car A/C timer / scheduled preheat. Needs a 1-minute check by the user in the climate screen and charge settings.
+7. Blocked: skywell.ps, manualslib.com.
