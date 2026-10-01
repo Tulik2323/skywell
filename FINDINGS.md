@@ -60,3 +60,10 @@ User answers: no A/C timer, no scheduled-charging option, no remote/key button. 
 | 5 | Head-unit ADB/sideload | Not relevant to A/C | 0 | Violates constraint | - |
 
 Honest conclusion: remote A/C start is unlikely within the constraints and budget. Realistic deliverable: monitoring (route 2) plus asking the importer (route 1).
+
+## Phase E follow-up – Wiring / aftermarket route (user chose to investigate; budget "depends on the offer")
+- **Likely**: Aftermarket remote-start vendors (StarLine, Pandora, iDatalink/Compustar) integrate via the car's CAN bus, but their support is per-vehicle-model. No source lists ET5/EV6 support. https://info.starlinesystems.co.uk/index.php/info/remote-start/ , https://pandorainfo.co.uk/pages/remote-start
+- **Unverified**: A generic remote-start kit can start an EV's cabin climate. The only EV precedent found is a user thread on a Chevy Bolt, not this platform: https://www.chevybolt.org/threads/aftermarket-remote-start-for-preconditioning.53577/ . A low-quality blog snippet (alibaba lifetips) quotes $200-500 install; do not rely on it.
+- **Unverified**: Skywell Israel / Kadori warranty position on aftermarket electronics. No source found. Must be asked in writing before any wiring.
+- **Discarded**: A search summary claimed the ET5's "T-box connects to Skywell Connect". Unsupported: Skywell Connect is a DELTA alarm app (phase A).
+- Next concrete step: ask StarLine/Pandora installers in Israel (and Kadori) whether any CAN module supports ET5 climate, with written price and warranty answer.
