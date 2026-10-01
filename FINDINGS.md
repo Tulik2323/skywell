@@ -44,3 +44,19 @@ The official app is very likely a dead end for a car without a DELTA module. Ret
 5. **Unverified**: Public DBC / Home Assistant work for Skywell: none found in English search. Russian/Turkish/Arabic forums (Drive2, 4PDA) and Hebrew Facebook groups not yet searched (blocked/no access).
 6. **Not found in manuals (pages blocked)**: whether the ET5 has an in-car A/C timer / scheduled preheat. Needs a 1-minute check by the user in the climate screen and charge settings.
 7. Blocked: skywell.ps, manualslib.com.
+
+## Phase D – skipped by agreement
+APK analysis not run: phase A indicates the app is a DELTA aftermarket-alarm client, so it cannot bind to a car without DELTA hardware. Can be revisited on request.
+
+## Phase E – Route ranking (no code until user approves)
+User answers: no A/C timer, no scheduled-charging option, no remote/key button. Budget 200 NIS.
+
+| # | Route | Remote A/C chance | Cost | Risk | Effort |
+|---|-------|------|------|------|--------|
+| 1 | Ask Kadori in writing whether a T-box/app exists for Israeli units (and Skywell Israel social pages) | Low (Unverified) | 0 | None | Low |
+| 2 | Read-only OBD: ELM327 BLE + Car Scanner (SOC, temps, charge state); optional ESP32 -> Home Assistant | None for A/C; gives monitoring | ~50-150 NIS | Very low (read-only; use a quality dongle) | Low-Med |
+| 3 | DELTA alarm hardware retrofit (the app's real target) | Possible but Unverified for Israel | High, over budget | High: wiring, warranty, RU vendor | High |
+| 4 | Write CAN frames / aftermarket remote-start wiring | Unverified | Medium | High: safety, warranty, violates constraint | High |
+| 5 | Head-unit ADB/sideload | Not relevant to A/C | 0 | Violates constraint | - |
+
+Honest conclusion: remote A/C start is unlikely within the constraints and budget. Realistic deliverable: monitoring (route 2) plus asking the importer (route 1).
