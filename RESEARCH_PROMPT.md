@@ -10,8 +10,7 @@ You are a senior automotive-connectivity researcher (EV telematics, CAN bus, rev
 ## My situation (facts)
 - Car: Skywell Pro GT, late 2024, Israeli-market unit. Owned by me.
 - Official app: `ru.skywell.deltaauto` (Google Play), built for Russia/China. I cannot pair it with my car.
-- The car has **no T-box** installed (or none that I know of; verify whether Israeli units ship without one or with it disabled).
-- I heard the feature is blocked or not offered in Israel. This is unverified.
+- **Update:** the Israeli importer/dealership told me the car **DOES have a T-box** (physically present). I also understood that **in Israel the T-box software/service was disabled** ("ביטלו את התוכנה"). Both claims come second-hand and are **unverified**: confirm what exactly was disabled (SIM/data plan, cloud backend registration, firmware feature flag, app binding) and whether it can be re-enabled by the importer or manufacturer without me modifying the car's software.
 
 ## Goals (priority order)
 1. **Turn on the A/C (pre-conditioning) remotely.** This is the must-have.
@@ -29,16 +28,16 @@ Also useful: Home Assistant integration, e.g. an automation that starts the A/C 
 **A. Why the app doesn't connect**
 1. How does `ru.skywell.deltaauto` bind a car to an account? (VIN, QR, activation code, T-box ID, SIM/ICCID?)
 2. Which backend/API hosts does it use, and is registration or login geo-restricted (RU/CN only)?
-3. Is a T-box a hard requirement for the cloud path? Can a car without one be bound at all?
+3. With a T-box present but disabled in Israel: what exactly is disabled (SIM/eSIM/data plan, backend account, activation flag)? Which party controls it (importer, SAIC/Skywell cloud, mobile carrier)? Can it be re-activated through official channels (importer request, TSP activation, VIN registration on the Skywell backend)?
 4. Are there other Skywell apps (global, Europe, Israel importer, Chinese "Skyworth/Skywell" apps) and how do they differ?
 
 **B. The car itself**
-5. Does the Pro GT (2024) have a factory T-box/4G module on export or Israeli builds? How can I check without touching software (fuse box, part number, head-unit menus, importer documentation)?
+5. The T-box is reportedly present: identify its model/part number, supplier, SIM type and connectors, and how to verify its state without touching software (head-unit menus, importer documentation, physical label). Does it also expose Bluetooth/local interfaces?
 6. Is the Pro GT the same platform as other Skywell/Skyworth models (ET5, HT, etc.), and what does that imply for compatibility?
 7. Who is the Israeli importer, and does it offer any connected-services app, retrofit T-box or official answer?
 
 **C. Alternatives to the official cloud**
-8. Retrofit or aftermarket T-box: does an official part exist for this model, and would it work on an Israeli unit?
+8. Replacement/regional T-box (Russia/China spec) or activation of the existing one: is there an official part or procedure, and would it work on an Israeli unit? Ask questions to prepare for the importer (exact wording to request activation).
 9. OBD-II / CAN options: which CAN bus is exposed on the OBD port, is it gateway-filtered, and can a read-only dongle (e.g. ELM327, ESP32 + CAN transceiver, CANable, Macchina) read SOC, temperatures, charge state?
 10. Can climate be **started** via OBD/CAN without modifying software? Be honest about whether this is realistic or needs the T-box path.
 11. Is there any public work on Skywell CAN databases (DBC files), Home Assistant integrations, GitHub repos, forums (Drive2, 4PDA, Telegram, Reddit, Facebook groups in Hebrew)?
@@ -62,7 +61,7 @@ Also useful: Home Assistant integration, e.g. an automation that starts the A/C 
 
 ## First step
 Before researching, ask me up to 5 short questions that unblock phase A and B, for example:
-- Exact trim, VIN prefix, and where I bought it (importer name).
+- Exact trim, VIN prefix, importer name, and the exact wording the dealership used about the T-box.
 - What the head-unit settings menu shows (any "Connected services", "SIM", "4G", "Skywell Connect").
 - Whether the car has any Bluetooth phone-key feature.
 - Phone type and whether I can install and inspect APKs.
