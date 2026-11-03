@@ -24,6 +24,16 @@ Also useful: Home Assistant integration, e.g. an automation that starts the A/C 
 - Physical wiring into the car is possible in principle but I only accept it if the risk to warranty and safety is clearly explained first. Flag every such option as a risk.
 - Do not touch other people's vehicles, accounts or servers. Only my own car and my own account.
 
+## New lead: StarLine (aftermarket telematics) – Israel
+- Israeli ad (StarLine Israel via מ.ס.ר, msrautoservice.com, WhatsApp 055-9192852): "המפתח החדש שלך: הטלפון". Product shown: a small StarLine box with a USB port and connector (likely a StarLine S96/S9-class GSM/CAN module + StarLine app). Ad was for Skywell ET5.
+- Dealer claims: fits all cars including mine (checked by license plate), software matching takes ~2 days, **no warranty impact**, mentioned something about OBD. Price: ask. All **unverified**.
+- Research questions:
+  1. Check the exact model in the ad and whether StarLine's CAN compatibility database (can.starline.ru) lists Skywell ET5 / Pro GT, and which functions (lock/unlock, **climate/pre-conditioning**, SOC/status) work on an EV.
+  2. How is it connected: OBD port plug-in, or wiring/CAN-tap? Reversible? Does it write to the car or only read/send CAN frames? Warranty claim: get it in writing from the importer.
+  3. Is the StarLine 2 app/cloud usable in Israel (Russian-company service, outage and sanctions risk, data privacy, SIM/roaming)? Any Home Assistant integration (official StarLine API exists in HA).
+  4. Does it make the Skywell T-box question irrelevant? Compare cost/risk vs reactivating the factory T-box.
+- Questions to ask the dealer (written): exact model number; installation method; confirmed function list for my VIN incl. A/C start; warranty in writing; price incl. installation and SIM/subscription; app language/region; refund if A/C does not work.
+
 ## Research questions (answer with evidence, not guesses)
 **A. Why the app doesn't connect**
 1. How does `ru.skywell.deltaauto` bind a car to an account? (VIN, QR, activation code, T-box ID, SIM/ICCID?)
